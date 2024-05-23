@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculate Net Present Value (NPV)</title>
+    <link rel="stylesheet" href="npv.css">
+</head>
+<body>
+    <header>
+        <h1>Calculate Net Present Value (NPV)</h1>
+    </header>
+    <main>
+        <div class="form_container">
+            <form id="npv">
+                <div class="form_group">
+                    <label for="initial_invest">Initial Investment:</label>
+                    <input type="number" id="initial_invest" step="0.01" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="interest_rate">Interest Rate (%):</label>
+                    <input type="number" id="interest_rate" step="0.01" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="tp">Time Period:</label>
+                    <input type="number" id="tp" step="0.01" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="cash_flows">Cash Flows (enter the values by separating with comma):</label>
+                    <input type="text" id="cash_flows" required>
+                </div>
+                <button type="submit">Calculate NPV</button>
+            </form>
+
+        </div>
+        <div id="result" class="result">
+            <h2>Results</h2>
+            <p id="final-npv"></p>
+            <table id="result_table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Cash Flow</th>
+                        <th>Present Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="option-link-container">
+            <a href="fv.html" class="option-link">Calculate Future Value (FV)</a>
+        </div>
+    </main>
+    <script src="npv.js"></script>
+</body>
+</html>
